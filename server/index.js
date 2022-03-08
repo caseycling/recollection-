@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
 const CONNECTION_URL =
-  'mongodb+srv://caseyclinga:123abc@passport.czhpd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+  'mongodb+srv://caseyclinga:123abc@passport.czhpd.mongodb.net/recollections?retryWrites=true&w=majority';
 
 const PORT = process.env.PORT || 5000;
 
