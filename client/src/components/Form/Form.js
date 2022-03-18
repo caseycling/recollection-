@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { TextField, Button, Typography, Paper } from '@material-ui/core';
 import FileBase from 'react-file-base64';
+import { useDispatch } from 'react-redux';
 
 import useStyles from './styles';
+import { createPost } from '../../actions/posts.js';
 
 const Form = () => {
   const [postData, setPostData] = useState({
@@ -13,8 +15,13 @@ const Form = () => {
     selectedFile: '',
   });
   const classes = useStyles();
+  const dispatch = useDispatch();
 
-  const handleSubmit = () => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(createPost(postData));
+  };
 
   const clear = () => {};
 
@@ -24,7 +31,7 @@ const Form = () => {
         autoComplete='off'
         noValidate
         className={`${classes.root} ${classes.form}`}
-        onSubmit={handleSubmit()}
+        onSubmit={handleSubmit}
       >
         <Typography variant='h6'>Creating a memory</Typography>
         <TextField
@@ -40,7 +47,7 @@ const Form = () => {
         <TextField
           name='title'
           vairant='outlined'
-          label='Creator'
+          label='Title'
           fullWidth
           value={postData.title}
           onChange={(e) => {
@@ -50,7 +57,7 @@ const Form = () => {
         <TextField
           name='message'
           vairant='outlined'
-          label='Creator'
+          label='Message'
           fullWidth
           value={postData.message}
           onChange={(e) => {
@@ -60,7 +67,7 @@ const Form = () => {
         <TextField
           name='tags'
           vairant='outlined'
-          label='Creator'
+          label='Tags'
           fullWidth
           value={postData.tags}
           onChange={(e) => {
@@ -83,6 +90,7 @@ const Form = () => {
           color='primary'
           size='large'
           type='submit'
+          onClick
           fullWidth
         >
           Submit
@@ -94,7 +102,7 @@ const Form = () => {
           onClick={clear}
           fullWidth
         >
-          Submit
+          Clear
         </Button>
       </form>
     </Paper>
