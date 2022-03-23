@@ -90,7 +90,7 @@ const Form = () => {
           color='primary'
           size='large'
           type='submit'
-          onClick
+          onClick={handleSubmit}
           fullWidth
         >
           Submit
