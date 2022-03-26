@@ -21,9 +21,18 @@ const Form = () => {
     e.preventDefault();
 
     dispatch(createPost(postData));
+    clear();
   };
 
-  const clear = () => {};
+  const clear = () => {
+    setPostData({
+      creator: '',
+      title: '',
+      message: '',
+      tags: '',
+      selectedFile: '',
+    });
+  };
 
   return (
     <Paper className={classes.paper}>

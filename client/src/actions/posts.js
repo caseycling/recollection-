@@ -5,6 +5,8 @@ export const getPosts = () => async (dispatch) => {
   try {
     //Post data
     const { data } = await api.fetchPosts();
+    console.log('DATA FROM ACTIONS');
+    console.log(data);
 
     //Sending post data via action.payload
     dispatch({ type: 'FETCH_ALL', payload: data });
@@ -17,7 +19,7 @@ export const createPost = (post) => async (dispatch) => {
   console.log(post);
   try {
     const { data } = await api.createPost(post);
-
+    console.log(data);
     dispatch({ type: 'CREATE', payload: data });
   } catch (error) {
     console.log(error);
