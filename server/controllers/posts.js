@@ -15,9 +15,9 @@ export const getPosts = async (req, res) => {
 };
 
 // Create posts
-export const createPost = (post) => async (dispatch) => {
-  const body = req.body;
-
+export const createPost = async (req, res) => {
+  const post = req.body;
+  console.log(post);
   const newPost = new PostMessage(post);
   try {
     await newPost.save();
@@ -28,6 +28,7 @@ export const createPost = (post) => async (dispatch) => {
   }
 };
 
+// export const updatePost = ()
 // export const createPost = async (req, res) => {
 //   const { title, message, selectedFile, creator, tags } = req.body;
 
