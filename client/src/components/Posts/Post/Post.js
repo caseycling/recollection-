@@ -35,7 +35,7 @@ const Post = ({ post, setCurrentId }) => {
           size='small'
           onClick={() => setCurrentId(post._id)}
         >
-          <MoreHorizIcon fontSize='default' />
+          <MoreHorizIcon fontSize='medium' />
         </Button>
       </div>
       <div className={classes.details}>
@@ -48,7 +48,7 @@ const Post = ({ post, setCurrentId }) => {
           {post.message}
         </Typography>
       </CardContent>
-      <CardActions classname={classes.cardAction}>
+      <CardActions className={classes.cardAction}>
         <Button size='small' color='primary' onClick={() => {}}>
           <ThumbUpAltIcon fontSize='small' />
           Like
