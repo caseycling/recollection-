@@ -1,11 +1,10 @@
 import PostMessage from '../models/postMessage.js';
+import mongoose from 'mongoose';
 
 //Get posts
 export const getPosts = async (req, res) => {
   try {
     const postMessages = await PostMessage.find();
-    console.log('POSTS FROM CONTROLLER');
-    console.log(postMessages);
 
     res.status(200).json(postMessages);
   } catch (error) {
@@ -30,15 +29,20 @@ export const createPost = async (req, res) => {
 
 export const updatePost = async (req, res) => {
   const { id: _id } = req.params;
+  console.log('=================');
+  console.log('CONTROLLER');
+  console.log('=================');
+  console.log(req.params);
+  console.log(mongoose.Types.ObjectId.isValid(_id));
   const post = req.body;
 
-  if (mongoose.Types.objectId.isVlaid(_id)) {
+  if (!mongoose.Types.ObjectId.isValid(_id)) {
     return res.status(404).send('No post with that id');
   }
 
   const updatedPost = await PostMessage.findByIdAndUpdate(_id, post, {
     new: true,
   });
-
+  console.log(updatedPost);
   res.json(updatedPost);
 };

@@ -33,6 +33,7 @@ const Form = ({ currentId, setCurrentId }) => {
     if (currentId) {
       dispatch(updatePost(currentId, postData));
     } else {
+      console.log('Form ');
       dispatch(createPost(postData));
     }
 
