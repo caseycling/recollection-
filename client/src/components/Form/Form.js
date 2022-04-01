@@ -41,6 +41,7 @@ const Form = ({ currentId, setCurrentId }) => {
   };
 
   const clear = () => {
+    setCurrentId(null);
     setPostData({
       creator: '',
       title: '',
