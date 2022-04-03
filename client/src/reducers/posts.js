@@ -1,6 +1,7 @@
 const posts = (posts = [], action) => {
   switch (action.type) {
     case 'UPDATE':
+    case 'LIKE':
       return posts.map((post) =>
         post._id === action.payload_id ? action.payload : post
       );
