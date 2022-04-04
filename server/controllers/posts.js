@@ -68,6 +68,6 @@ export const likePost = async (req, res) => {
     { likeCount: (post.likeCount += 1) },
     { new: true }
   );
-  console.log(updatedPost);
+
   res.json(updatedPost);
 };
