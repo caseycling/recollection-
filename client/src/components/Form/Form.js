@@ -62,7 +62,7 @@ const Form = ({ currentId, setCurrentId }) => {
         <Typography variant='h6'>Creating a memory</Typography>
         <TextField
           name='creator'
-          vairant='outlined'
+          variant='outlined'
           label='Creator'
           fullWidth
           value={postData.creator}
@@ -72,7 +72,7 @@ const Form = ({ currentId, setCurrentId }) => {
         />
         <TextField
           name='title'
-          vairant='outlined'
+          variant='outlined'
           label='Title'
           fullWidth
           value={postData.title}
@@ -82,7 +82,7 @@ const Form = ({ currentId, setCurrentId }) => {
         />
         <TextField
           name='message'
-          vairant='outlined'
+          variant='outlined'
           label='Message'
           fullWidth
           value={postData.message}
@@ -92,7 +92,7 @@ const Form = ({ currentId, setCurrentId }) => {
         />
         <TextField
           name='tags'
-          vairant='outlined'
+          variant='outlined'
           label='Tags'
           fullWidth
           value={postData.tags}
