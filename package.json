@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "concurrently \"cd server && npm start\" && \"cd client && npm start\"",
-    "build": "cd client && npm build"
+    "build": "cd client && npm run build"
   },
   "devDependencies": {
     "cypress": "^9.5.4"
