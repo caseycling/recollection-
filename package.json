@@ -2,7 +2,7 @@
   "scripts": {
     "client": "cd client && npm start",
     "server": "cd server && npm start",
-    "start": "concurrently \"cd server && npm start\" && \"cd client && npm start\"",
+    "start": "start-server-and-test client server",
     "build": "cd client && npm run build"
   },
   "devDependencies": {
