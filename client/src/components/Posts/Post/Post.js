@@ -25,7 +25,6 @@ const Post = ({ post, setCurrentId }) => {
         className={classes.media}
         image={post.selectedFile}
         title={post.title}
-        component='img'
       />
       <div className={classes.overlay}>
         <Typography variant='h6'>{post.creator}</Typography>
