@@ -28,7 +28,7 @@ const App = () => {
           className={classes.image}
           src={memories}
           alt='memories'
-          height='60'
+          height='70'
         />
       </AppBar>
       <Grow in>
