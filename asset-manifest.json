@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/reminiscence/static/css/main.fe11ac7b.css",
+    "main.js": "/reminiscence/static/js/main.8105ba0e.js",
+    "static/media/memories.png": "/reminiscence/static/media/memories.9cfa8a4697e085d87136.png",
+    "index.html": "/reminiscence/index.html",
+    "main.fe11ac7b.css.map": "/reminiscence/static/css/main.fe11ac7b.css.map",
+    "main.8105ba0e.js.map": "/reminiscence/static/js/main.8105ba0e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe11ac7b.css",
+    "static/js/main.8105ba0e.js"
+  ]
+}
