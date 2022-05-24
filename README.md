@@ -1,4 +1,4 @@
-# Getting Started with Memories
+# Getting Started with Reminiscence
 
 After cloning the repo, install all the dependencies
 
