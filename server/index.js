@@ -2,6 +2,8 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 import postRoutes from './routes/posts.js';
 
@@ -17,6 +19,8 @@ app.use('/posts', postRoutes);
 
 const CONNECTION_URL =
   'mongodb+srv://caseyclinga:123abc@passport.czhpd.mongodb.net/recollections?retryWrites=true&w=majority';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
